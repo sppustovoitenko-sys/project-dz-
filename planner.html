@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Планувальник задач</h1>
+
+<h2>Додати задачу</h2>
+
+<form action="/add_task" method="post">
+
+<input type="text" name="title" placeholder="Назва задачі" required>
+
+<textarea name="description" placeholder="Опис"></textarea>
+
+<button type="submit">Додати</button>
+
+</form>
+
+<hr>
+
+<h2>Список задач</h2>
+
+{% for task in tasks %}
+
+<div class="task">
+
+<h3>{{ task.title }}</h3>
+
+<p>{{ task.description }}</p>
+
+<small>{{ task.created_at }}</small>
+
+<br>
+
+<a class="delete" href="/delete/{{ task.id }}">Видалити</a>
+
+</div>
+
+{% else %}
+
+<p>Немає задач</p>
+
+{% endfor %}
+
+{% endblock %}
