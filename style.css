@@ -1,0 +1,44 @@
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+    margin:0;
+}
+
+header{
+    background:#333;
+    padding:15px;
+}
+
+header a{
+    color:white;
+    margin-right:20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.container{
+    width:800px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+form input, textarea{
+    width:100%;
+    padding:8px;
+    margin-bottom:10px;
+}
+
+button{
+    padding:10px 15px;
+}
+
+.task{
+    border:1px solid #ddd;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+.delete{
+    color:red;
+}
